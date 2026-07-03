@@ -58,7 +58,7 @@ namespace Accept_Reject2.Helper
 
         /// <summary>
         /// Returns true if the sample lies inside the gate.
-        /// </summary>
+        /// </summary.>
         public bool IsInside(Rectangle clientRect, float sampleX, float sampleY)
         {
             int screenX = (int)Math.Round(clientRect.Width / 2f + sampleX);

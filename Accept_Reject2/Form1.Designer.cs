@@ -1,4 +1,4 @@
-﻿using Font=System.Drawing.Font;
+﻿using Font = System.Drawing.Font;
 using System.Xml.Linq;
 using static System.Net.Mime.MediaTypeNames;
 namespace Accept_Reject2
@@ -44,6 +44,7 @@ namespace Accept_Reject2
             label5 = new Label();
             btnUpdate = new Button();
             btnSample = new Button();
+            btnEditGate = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -59,7 +60,7 @@ namespace Accept_Reject2
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label1.Location = new Point(550, 34);
+            label1.Location = new Point(420, 34);
             label1.Name = "label1";
             label1.Size = new Size(45, 15);
             label1.TabIndex = 1;
@@ -69,7 +70,7 @@ namespace Accept_Reject2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label2.Location = new Point(550, 69);
+            label2.Location = new Point(420, 63);
             label2.Name = "label2";
             label2.Size = new Size(41, 15);
             label2.TabIndex = 2;
@@ -79,7 +80,7 @@ namespace Accept_Reject2
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label3.Location = new Point(552, 105);
+            label3.Location = new Point(420, 95);
             label3.Name = "label3";
             label3.Size = new Size(39, 15);
             label3.TabIndex = 3;
@@ -87,21 +88,21 @@ namespace Accept_Reject2
             // 
             // heightText
             // 
-            heightText.Location = new Point(617, 31);
+            heightText.Location = new Point(491, 31);
             heightText.Name = "heightText";
             heightText.Size = new Size(100, 23);
             heightText.TabIndex = 4;
             // 
             // widthText
             // 
-            widthText.Location = new Point(617, 66);
+            widthText.Location = new Point(491, 60);
             widthText.Name = "widthText";
             widthText.Size = new Size(100, 23);
             widthText.TabIndex = 5;
             // 
             // AngleText
             // 
-            AngleText.Location = new Point(617, 102);
+            AngleText.Location = new Point(491, 89);
             AngleText.Name = "AngleText";
             AngleText.Size = new Size(100, 23);
             AngleText.TabIndex = 6;
@@ -110,7 +111,7 @@ namespace Accept_Reject2
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label4.Location = new Point(550, 141);
+            label4.Location = new Point(420, 121);
             label4.Name = "label4";
             label4.Size = new Size(53, 15);
             label4.TabIndex = 7;
@@ -118,14 +119,14 @@ namespace Accept_Reject2
             // 
             // centerXText
             // 
-            centerXText.Location = new Point(617, 138);
+            centerXText.Location = new Point(491, 118);
             centerXText.Name = "centerXText";
             centerXText.Size = new Size(100, 23);
             centerXText.TabIndex = 8;
             // 
             // centerYText
             // 
-            centerYText.Location = new Point(617, 176);
+            centerYText.Location = new Point(491, 147);
             centerYText.Name = "centerYText";
             centerYText.Size = new Size(100, 23);
             centerYText.TabIndex = 10;
@@ -134,7 +135,7 @@ namespace Accept_Reject2
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label5.Location = new Point(550, 179);
+            label5.Location = new Point(421, 150);
             label5.Name = "label5";
             label5.Size = new Size(52, 15);
             label5.TabIndex = 9;
@@ -142,7 +143,7 @@ namespace Accept_Reject2
             // 
             // btnUpdate
             // 
-            btnUpdate.Location = new Point(679, 226);
+            btnUpdate.Location = new Point(528, 198);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(75, 23);
             btnUpdate.TabIndex = 11;
@@ -152,7 +153,7 @@ namespace Accept_Reject2
             // 
             // btnSample
             // 
-            btnSample.Location = new Point(583, 227);
+            btnSample.Location = new Point(438, 198);
             btnSample.Name = "btnSample";
             btnSample.Size = new Size(75, 23);
             btnSample.TabIndex = 12;
@@ -160,11 +161,22 @@ namespace Accept_Reject2
             btnSample.UseVisualStyleBackColor = true;
             btnSample.Click += btnSample_Click;
             // 
+            // btnEditGate
+            // 
+            btnEditGate.Location = new Point(438, 227);
+            btnEditGate.Name = "btnEditGate";
+            btnEditGate.Size = new Size(75, 23);
+            btnEditGate.TabIndex = 13;
+            btnEditGate.Text = "Enable Edit";
+            btnEditGate.UseVisualStyleBackColor = true;
+            btnEditGate.Click += btnEditGate_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(644, 450);
+            Controls.Add(btnEditGate);
             Controls.Add(btnSample);
             Controls.Add(btnUpdate);
             Controls.Add(centerYText);
@@ -178,6 +190,7 @@ namespace Accept_Reject2
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
+            MinimumSize = new Size(630, 450);
             Name = "Form1";
             Text = "Accept_Reject";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -200,5 +213,6 @@ namespace Accept_Reject2
         private Label label5;
         private Button btnUpdate;
         private Button btnSample;
+        private Button btnEditGate;
     }
 }
